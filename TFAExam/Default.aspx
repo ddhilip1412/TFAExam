@@ -39,7 +39,7 @@
                             <p class="navbar-text">Signed in as <a href="#" class="navbar-link">Default</a></p>
                         </li>
                         <li class="">
-                            <asp:Button ID="btnSignOut" runat="server" Text="Sign Out" class="btn btn-default navbar-btn" OnClick="btnSignOut_Click" /></li>
+                            <asp:Button ID="btnSignOut" runat="server" Text="Sign Out" CssClass="btn btn-default navbar-btn" OnClick="btnSignOut_Click" /></li>
                     </ul>
                 </div>
             </div>
@@ -53,7 +53,7 @@
                             <h4>Student Names</h4>
                         </div>
                         <div class="col-md-6">
-                            <asp:TextBox ID="txtBoxStudentNames" runat="server" type="text" class="form-control"></asp:TextBox>
+                            <asp:TextBox ID="txtBoxStudentNames" runat="server" type="text" CssClass="form-control"></asp:TextBox>
                         </div>
                     </div>
 
@@ -100,6 +100,7 @@
                     </div>
                 </div>
             </div>
+        </div>
     </form>
 
 
