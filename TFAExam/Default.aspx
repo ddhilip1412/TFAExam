@@ -46,7 +46,7 @@
         </nav>
         <div class="container">
             <div class="row row-centered">
-                <div class="col-md-8 col-centered" style="background-color: #eee; padding: 20px;">
+                <div class="col-xs-10 col-sm-10 col-md-8 col-lg-8 col-centered" style="background-color: #eee; padding: 20px;">
                     <div class="row filter-row">
                         <!--Student Names-->
                         <div class="col-md-6">
@@ -63,7 +63,13 @@
                             <h4>Subjects</h4>
                         </div>
                         <div class="col-md-6">
-                            <!--Check boxes should be generated here dynamically-->
+                            <fieldset>
+                                <div class="checkbox checkboxlist">
+                                    <!--List of Subjects should be generated here dynamically-->
+                                    <asp:CheckBoxList ID="cbxlSubjects" runat="server" RepeatDirection="Vertical" RepeatLayout="Flow">
+                                    </asp:CheckBoxList>
+                                </div>
+                            </fieldset>
                         </div>
                     </div>
 
@@ -73,22 +79,20 @@
                             <h4>Exam Time</h4>
                         </div>
                         <div class="col-md-6">
-                            <div class="dropdown">
-                                <button class="btn btn-toolbar dropdown-toggle" type="button" id="ddmExamTime" runat="server" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                    Select Exam Time
-                                    <span class="caret"></span>
-                                </button>
-                                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                            <fieldset>
+                                <div class="checkbox checkboxlist">
                                     <!--List of Exam times should be generated here dynamically-->
-                                </ul>
-                            </div>
+                                    <asp:CheckBoxList ID="cbxlExamTime" runat="server" RepeatDirection="Vertical" RepeatLayout="Flow">
+                                    </asp:CheckBoxList>
+                                </div>
+                            </fieldset>
                         </div>
                     </div>
 
                     <div class="row row-centered filter-row">
                         <!--Submit to search button-->
                         <div class="col-md-2 col-centered">
-                            <asp:Button ID="btnSearch" runat="server" Text="Search" class="btn btn-default navbar-btn" />
+                            <asp:Button ID="btnSearch" runat="server" Text="Search" class="btn btn-default navbar-btn" OnClick="btnSearch_Click" />
                         </div>
                     </div>
                     <div>

@@ -19,6 +19,14 @@ div {
     border-radius: 7px;
 }
 
-.filter-row{
-    padding-top : 20px;
+.filter-row {
+    padding-top: 20px;
+}
+
+.checkbox.checkboxlist input[type="checkbox"] {
+    margin-left: 0;
+}
+fieldset .checkbox
+{
+	margin-top: 4px;
 }
