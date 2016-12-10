@@ -47,6 +47,11 @@
         <div class="container">
             <div class="row row-centered">
                 <div class="col-xs-10 col-sm-10 col-md-8 col-lg-8 col-centered" style="background-color: #eee; padding: 20px;">
+
+                    <h1 class="mb-0">Filter Search results</h1>
+                    <p class="">Enter the filter criteria to generate results</p>
+                    <hr />
+
                     <div class="row filter-row">
                         <!--Student Names-->
                         <div class="col-md-6">
@@ -54,6 +59,26 @@
                         </div>
                         <div class="col-md-6">
                             <asp:TextBox ID="txtBoxStudentNames" runat="server" type="text" CssClass="form-control"></asp:TextBox>
+                        </div>
+                    </div>
+
+                    <div class="row filter-row">
+                        <!--Student IDs-->
+                        <div class="col-md-6">
+                            <h4>Student Registration IDs</h4>
+                        </div>
+                        <div class="col-md-6">
+                            <asp:TextBox ID="txtBoxStudentIDs" runat="server" type="text" CssClass="form-control"></asp:TextBox>
+                        </div>
+                    </div>
+
+                    <div class="row filter-row">
+                        <!--Student Roll Nos-->
+                        <div class="col-md-6">
+                            <h4>Student Subject Roll Nos</h4>
+                        </div>
+                        <div class="col-md-6">
+                            <asp:TextBox ID="txtBoxStudentRollNos" runat="server" type="text" CssClass="form-control"></asp:TextBox>
                         </div>
                     </div>
 
