@@ -46,11 +46,56 @@
         </nav>
         <div class="container">
             <div class="row row-centered">
-                <div class="col-md-8 col-centered">
-                    <!--Content comes here-->
+                <div class="col-md-8 col-centered" style="background-color: #eee; padding: 20px;">
+                    <div class="row filter-row">
+                        <!--Student Names-->
+                        <div class="col-md-6">
+                            <h4>Student Names</h4>
+                        </div>
+                        <div class="col-md-6">
+                            <asp:TextBox ID="txtBoxStudentNames" runat="server" type="text" class="form-control"></asp:TextBox>
+                        </div>
+                    </div>
+
+                    <div class="row filter-row">
+                        <!--Subjects-->
+                        <div class="col-md-6">
+                            <h4>Subjects</h4>
+                        </div>
+                        <div class="col-md-6">
+                            <!--Check boxes should be generated here dynamically-->
+                        </div>
+                    </div>
+
+                    <div class="row filter-row">
+                        <!--Exam Time-->
+                        <div class="col-md-6">
+                            <h4>Exam Time</h4>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="dropdown">
+                                <button class="btn btn-toolbar dropdown-toggle" type="button" id="ddmExamTime" runat="server" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                    Select Exam Time
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                    <!--List of Exam times should be generated here dynamically-->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row row-centered filter-row">
+                        <!--Submit to search button-->
+                        <div class="col-md-2 col-centered">
+                            <asp:Button ID="btnSearch" runat="server" Text="Search" class="btn btn-default navbar-btn" />
+                        </div>
+                    </div>
+                    <div>
+                        <!--The result table will be generated here-->
+                    </div>
                 </div>
             </div>
-        </div>
     </form>
 
 

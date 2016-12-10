@@ -1,14 +1,24 @@
 ﻿body {
     padding-top: 70px;
 }
+
 .row-centered {
-    text-align:center;
+    text-align: center;
 }
+
 .col-centered {
-    display:inline-block;
-    float:none;
+    display: inline-block;
+    float: none;
     /* reset the text-align */
-    text-align:left;
+    text-align: left;
     /* inline-block space fix */
-    margin-right:-4px;
+    margin-right: -4px;
+}
+
+div {
+    border-radius: 7px;
+}
+
+.filter-row{
+    padding-top : 20px;
 }
