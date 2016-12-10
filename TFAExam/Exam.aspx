@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Exam.aspx.cs" Inherits="_Exam" %>
 
 <!DOCTYPE html>
 
@@ -28,23 +28,38 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">101</a>
+                    <a class="navbar-brand" href="#">TFA</a>
                 </div>
+
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="feeDetails.aspx">Fee Details<span class="sr-only">(current)</span></a></li>
+                    </ul>
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="exam.aspx">Exam Committee<span class="sr-only">(current)</span></a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <li>
-                            <p class="navbar-text">Signed in as <a href="#" class="navbar-link">Default</a></p>
+                        <li class="dropdown">
+                            <a id="profileDropdownMenu" runat="server" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <asp:LinkButton ID="btnChangePassword" runat="server" OnClick="btnChangePassword_Click" CssClass="">Change Password</asp:LinkButton>
+                                </li>
+                                <li role="separator" class="divider"></li>
+                                <li>
+                                    <asp:LinkButton ID="btnSignOut" runat="server" OnClick="btnSignOut_Click" CssClass="">Sign Out</asp:LinkButton>
+                                </li>
+                            </ul>
                         </li>
-                        <li class="">
-                            <asp:Button ID="btnSignOut" runat="server" Text="Sign Out" CssClass="btn btn-default navbar-btn" OnClick="btnSignOut_Click" /></li>
                     </ul>
                 </div>
             </div>
         </nav>
+
         <div class="container">
+            <div class="jumbotron">
+                <h1>Exam Portal</h1>
+            </div>
             <div class="row row-centered">
                 <div class="col-xs-10 col-sm-10 col-md-8 col-lg-8 col-centered" style="background-color: #eee; padding: 20px;">
 
