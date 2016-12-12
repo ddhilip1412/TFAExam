@@ -47,89 +47,99 @@
         <div class="container">
             <div class="row row-centered">
                 <div class="col-xs-10 col-sm-10 col-md-8 col-lg-8 col-centered" style="background-color: #eee; padding: 20px;">
+                    <ul class="nav nav-tabs">
+                        <li class="active">
+                            <a href="#examreport" data-toggle="tab">Reports</a>
+                        </li>
+                        <li><a href="#examadd" data-toggle="tab">Add entry</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div id="examreport" class="tab-pane active">
+                            <h1 class="mb-0">Filter Search results</h1>
+                            <p class="">Enter the filter criteria to generate results</p>
+                            <hr />
 
-                    <h1 class="mb-0">Filter Search results</h1>
-                    <p class="">Enter the filter criteria to generate results</p>
-                    <hr />
-
-                    <div class="row filter-row">
-                        <!--Student Names-->
-                        <div class="col-md-6">
-                            <h4>Student Names</h4>
-                        </div>
-                        <div class="col-md-6">
-                            <asp:TextBox ID="txtBoxStudentNames" runat="server" type="text" CssClass="form-control"></asp:TextBox>
-                        </div>
-                    </div>
-
-                    <div class="row filter-row">
-                        <!--Student IDs-->
-                        <div class="col-md-6">
-                            <h4>Student Registration IDs</h4>
-                        </div>
-                        <div class="col-md-6">
-                            <asp:TextBox ID="txtBoxStudentIDs" runat="server" type="text" CssClass="form-control"></asp:TextBox>
-                        </div>
-                    </div>
-
-                    <div class="row filter-row">
-                        <!--Student Roll Nos-->
-                        <div class="col-md-6">
-                            <h4>Student Subject Roll Nos</h4>
-                        </div>
-                        <div class="col-md-6">
-                            <asp:TextBox ID="txtBoxStudentRollNos" runat="server" type="text" CssClass="form-control"></asp:TextBox>
-                        </div>
-                    </div>
-
-                    <div class="row filter-row">
-                        <!--Subjects-->
-                        <div class="col-md-6">
-                            <h4>Subjects</h4>
-                        </div>
-                        <div class="col-md-6">
-                            <fieldset>
-                                <div class="checkbox checkboxlist">
-                                    <!--List of Subjects should be generated here dynamically-->
-                                    <asp:CheckBoxList ID="cbxlSubjects" runat="server" RepeatDirection="Vertical" RepeatLayout="Flow">
-                                    </asp:CheckBoxList>
+                            <div class="row filter-row">
+                                <!--Student Names-->
+                                <div class="col-md-6">
+                                    <h4>Student Names</h4>
                                 </div>
-                            </fieldset>
-                        </div>
-                    </div>
-
-                    <div class="row filter-row">
-                        <!--Exam Time-->
-                        <div class="col-md-6">
-                            <h4>Exam Time</h4>
-                        </div>
-                        <div class="col-md-6">
-                            <fieldset>
-                                <div class="checkbox checkboxlist">
-                                    <!--List of Exam times should be generated here dynamically-->
-                                    <asp:CheckBoxList ID="cbxlExamTime" runat="server" RepeatDirection="Vertical" RepeatLayout="Flow">
-                                    </asp:CheckBoxList>
+                                <div class="col-md-6">
+                                    <asp:TextBox ID="txtBoxStudentNames" runat="server" type="text" CssClass="form-control"></asp:TextBox>
                                 </div>
-                            </fieldset>
-                        </div>
-                    </div>
+                            </div>
 
-                    <div class="row row-centered filter-row">
-                        <!--Submit to search button-->
-                        <div class="col-md-2 col-centered">
-                            <asp:Button ID="btnSearch" runat="server" Text="Search" class="btn btn-default navbar-btn" OnClick="btnSearch_Click" />
+                            <div class="row filter-row">
+                                <!--Student IDs-->
+                                <div class="col-md-6">
+                                    <h4>Student Registration IDs</h4>
+                                </div>
+                                <div class="col-md-6">
+                                    <asp:TextBox ID="txtBoxStudentIDs" runat="server" type="text" CssClass="form-control"></asp:TextBox>
+                                </div>
+                            </div>
+
+                            <div class="row filter-row">
+                                <!--Student Roll Nos-->
+                                <div class="col-md-6">
+                                    <h4>Student Subject Roll Nos</h4>
+                                </div>
+                                <div class="col-md-6">
+                                    <asp:TextBox ID="txtBoxStudentRollNos" runat="server" type="text" CssClass="form-control"></asp:TextBox>
+                                </div>
+                            </div>
+
+                            <div class="row filter-row">
+                                <!--Subjects-->
+                                <div class="col-md-6">
+                                    <h4>Subjects</h4>
+                                </div>
+                                <div class="col-md-6">
+                                    <fieldset>
+                                        <div class="checkbox checkboxlist">
+                                            <!--List of Subjects should be generated here dynamically-->
+                                            <asp:CheckBoxList ID="cbxlSubjects" runat="server" RepeatDirection="Vertical" RepeatLayout="Flow">
+                                            </asp:CheckBoxList>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+
+                            <div class="row filter-row">
+                                <!--Exam Time-->
+                                <div class="col-md-6">
+                                    <h4>Exam Time</h4>
+                                </div>
+                                <div class="col-md-6">
+                                    <fieldset>
+                                        <div class="checkbox checkboxlist">
+                                            <!--List of Exam times should be generated here dynamically-->
+                                            <asp:CheckBoxList ID="cbxlExamTime" runat="server" RepeatDirection="Vertical" RepeatLayout="Flow">
+                                            </asp:CheckBoxList>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+
+                            <div class="row row-centered filter-row">
+                                <!--Submit to search button-->
+                                <div class="col-md-2 col-centered">
+                                    <asp:Button ID="btnSearch" runat="server" Text="Search" class="btn btn-default navbar-btn" OnClick="btnSearch_Click" />
+                                </div>
+                            </div>
+                            <div>
+                                <!--The result table will be generated here-->
+                            </div>
                         </div>
-                    </div>
-                    <div>
-                        <!--The result table will be generated here-->
+                        <div id="examadd" class="tab-pane">
+                            <!--Entry adding Form content to be added here-->
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </form>
-
-
-
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
